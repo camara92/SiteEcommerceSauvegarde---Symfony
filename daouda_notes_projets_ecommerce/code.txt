@@ -1,0 +1,25 @@
+ 
+public function uploadIllustration($evnt){
+    $entity = $event->getEntityInstance();
+            //$tmpname = $entity->getIllustration();
+            $tmpname= $_FILES['Product']['tmpname']['illustration'];
+            $filename =uniqid();
+            $extension = pathinfo(($_FILES['name']['illustration']), PATHINFO_EXTENSION);
+            $projectdir = $this->appKernel->getProjectDir();
+            move_uploaded_file($tmpname, $projectdir.'/public/uploads/'.$filename. '.'.$extension);
+            $entity->setIllustration($filename.'.'.$extension); 
+}
+
+public function updateIllustration(BeforeEntityUpdatedEvent $event){
+       // die('Mis à jour effectué avec succès ! Merci.');
+        //code pris en bas pour moin de répétion :
+        if(!($event->getEntityInstance() instanceof Product)){
+            return;
+        }
+        if($_FILES['Product']['tmpname']['illustration'] != ''){
+            
+            $this->uploadIllustration($event);
+            
+        }
+   
+    }

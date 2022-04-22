@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Mon compte - la boutique en ligne {% endblock %}
+
+{% block content %}
+<h1>Mon compte </h1>
+
+Bonjour {{app.user.firstname}} {{app.user.lastname}}, bienvenue dans votre compte utilisateur.<br/> vous allez adorer !!!
+<hr>
+- <a href= "{{ path('account_password') }}"> Modifier mon de passe</a><br/>
+- Ajouter mes adresses <br/>
+- Mes commandes <br/> 
+<hr>
+{% endblock %}

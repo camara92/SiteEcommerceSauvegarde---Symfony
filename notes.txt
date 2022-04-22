@@ -1,0 +1,501 @@
+Windows PowerShell
+Copyright (C) Microsoft Corporation. Tous droits réservés.
+
+Installez la dernière version de PowerShell pour de nouvelles fonctionnalités et améliorations ! https://aka.ms/PSWindows
+
+PS C:\wamp64\www\UdemySiteEcommerce> symfony console make:controller
+
+ Next: Open your new controller class and add some pages!
+PS C:\wamp64\www\UdemySiteEcommerce> symfony console make:user
+
+ The name of the security user class (e.g. User) [User]:
+ > 
+
+ Do you want to store user data in the database (via Doctrine)? (yes/no) [yes]:
+ > 
+
+ Enter a property name that will be the unique "display" name for the user (e.g. email, username, uuid) [email]:
+ > 
+
+ Will this app need to hash/check user passwords? Choose No if passwords are not needed or will be checked/hashed by some other system (e.g. a single sign-on server).
+
+ Does this app need to hash/check user passwords? (yes/no) [yes]:
+ > 
+
+ created: src/Entity/User.php
+ created: src/Repository/UserRepository.php
+ updated: src/Entity/User.php
+ updated: config/packages/security.yaml
+
+ 
+  Success! 
+ 
+
+ Next Steps:
+   - Review your new App\Entity\User class.
+   - Use make:entity to add more fields to your User entity and then run make:migration.
+   - Create a way to authenticate! See https://symfony.com/doc/current/security.html
+PS C:\wamp64\www\UdemySiteEcommerce> symfony console doctrine:database:create
+
+In Filesystem.php line 200:
+                                                                                                                                           
+  Failed to remove directory "C:\wamp64\www\UdemySiteEcommerce\var\cache\dev\ContainerSfBY1C1": rmdir(C:\wamp64\www\UdemySiteEcommerce\v  
+  ar\cache\dev\ContainerSfBY1C1): Directory not empty                                                                                      
+                                                                                                                                           
+
+PS C:\wamp64\www\UdemySiteEcommerce> symfony console                         
+Symfony 5.4.4 (env: dev, debug: true)
+
+Usage:
+  command [options] [arguments]
+
+Options:
+  -h, --help            Display help for the given command. When no command is given display help for the list command
+  -q, --quiet           Do not output any message
+  -V, --version         Display this application version
+      --ansi|--no-ansi  Force (or disable --no-ansi) ANSI output
+  -n, --no-interaction  Do not ask any interactive question
+  -e, --env=ENV         The Environment name. [default: "dev"]
+      --no-debug        Switch off debug mode.
+  -v|vv|vvv, --verbose  Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug
+
+Available commands:
+  about                                      Display information about the current project
+  completion                                 Dump the shell completion script
+  help                                       Display help for a command
+  list                                       List commands
+ assets
+  assets:install                             Install bundle's web assets under a public directory
+ cache
+  cache:clear                                Clear the cache
+  cache:pool:clear                           Clear cache pools
+  cache:pool:delete                          Delete an item from a cache pool
+  cache:pool:list                            List available cache pools
+  cache:pool:prune                           Prune cache pools
+  cache:warmup                               Warm up an empty cache
+ config
+  config:dump-reference                      Dump the default configuration for an extension
+ dbal
+  dbal:run-sql                               Executes arbitrary SQL directly from the command line.
+ debug
+  debug:autowiring                           List classes/interfaces you can use for autowiring
+  debug:config                               Dump the current configuration for an extension
+  debug:container                            Display current services for an application
+  debug:dotenv                               Lists all dotenv files with variables and values
+  debug:event-dispatcher                     Display configured listeners for an application
+  debug:firewall                             Display information about your security firewall(s)
+  debug:form                                 Display form type information
+  debug:messenger                            List messages you can dispatch using the message buses
+  debug:router                               Display current routes for an application
+  debug:translation                          Display translation messages information
+  debug:twig                                 Show a list of twig functions, filters, globals and tests
+  debug:validator                            Display validation constraints for classes
+ doctrine
+  doctrine:cache:clear-collection-region     Clear a second-level cache collection region
+  doctrine:cache:clear-entity-region         Clear a second-level cache entity region
+  doctrine:cache:clear-metadata              Clears all metadata cache for an entity manager
+  doctrine:cache:clear-query                 Clears all query cache for an entity manager
+  doctrine:cache:clear-query-region          Clear a second-level cache query region
+  doctrine:cache:clear-result                Clears result cache for an entity manager
+  doctrine:database:create                   Creates the configured database
+  doctrine:database:drop                     Drops the configured database
+  doctrine:ensure-production-settings        Verify that Doctrine is properly configured for a production environment
+  doctrine:mapping:convert                   [orm:convert:mapping] Convert mapping information between supported formats
+  doctrine:mapping:import                    Imports mapping information from an existing database
+  doctrine:mapping:info
+  doctrine:migrations:current                [current] Outputs the current version
+  doctrine:migrations:diff                   [diff] Generate a migration by comparing your current database to your mapping information.   
+  doctrine:migrations:dump-schema            [dump-schema] Dump the schema for your database to a migration.
+  doctrine:migrations:execute                [execute] Execute one or more migration versions up or down manually.
+  doctrine:migrations:generate               [generate] Generate a blank migration class.
+  doctrine:migrations:latest                 [latest] Outputs the latest version
+  doctrine:migrations:list                   [list-migrations] Display a list of all available migrations and their status.
+  doctrine:migrations:migrate                [migrate] Execute a migration to a specified version or the latest available version.
+  doctrine:migrations:rollup                 [rollup] Rollup migrations by deleting all tracked versions and insert the one version that exists.
+  doctrine:migrations:status                 [status] View the status of a set of migrations.
+  doctrine:migrations:sync-metadata-storage  [sync-metadata-storage] Ensures that the metadata storage is at the latest version.
+  doctrine:migrations:up-to-date             [up-to-date] Tells you if your schema is up-to-date.
+  doctrine:migrations:version                [version] Manually add and delete migration versions from the version table.
+  doctrine:query:dql                         Executes arbitrary DQL directly from the command line
+  doctrine:query:sql                         Executes arbitrary SQL directly from the command line.
+  doctrine:schema:create                     Executes (or dumps) the SQL needed to generate the database schema
+  doctrine:schema:drop                       Executes (or dumps) the SQL needed to drop the current database schema
+  doctrine:schema:update                     Executes (or dumps) the SQL needed to update the database schema to match the current mapping metadata
+  doctrine:schema:validate                   Validate the mapping files
+ lint
+  lint:container                             Ensure that arguments injected into services match type declarations
+  lint:twig                                  Lint a Twig template and outputs encountered errors
+  lint:xliff                                 Lint an XLIFF file and outputs encountered errors
+  lint:yaml                                  Lint a YAML file and outputs encountered errors
+ make
+  make:auth                                  Creates a Guard authenticator of different flavors
+  make:command                               Creates a new console command class
+  make:controller                            Creates a new controller class
+  make:crud                                  Creates CRUD for Doctrine entity class
+  make:docker:database                       Adds a database container to your docker-compose.yaml file
+  make:entity                                Creates or updates a Doctrine entity class, and optionally an API Platform resource
+  make:fixtures                              Creates a new class to load Doctrine fixtures
+  make:form                                  Creates a new form class
+  make:message                               Creates a new message and handler
+  make:messenger-middleware                  Creates a new messenger middleware
+  make:migration                             Creates a new migration based on database changes
+  make:registration-form                     Creates a new registration form system
+  make:reset-password                        Create controller, entity, and repositories for use with symfonycasts/reset-password-bundle   
+  make:serializer:encoder                    Creates a new serializer encoder class
+  make:serializer:normalizer                 Creates a new serializer normalizer class
+  make:subscriber                            Creates a new event subscriber class
+  make:test                                  [make:unit-test|make:functional-test] Creates a new test class
+  make:twig-extension                        Creates a new Twig extension class
+  make:user                                  Creates a new security user class
+  make:validator                             Creates a new validator and constraint class
+  make:voter                                 Creates a new security voter class
+ messenger
+  messenger:consume                          Consume messages
+  messenger:failed:remove                    Remove given messages from the failure transport
+  messenger:failed:retry                     Retry one or more messages from the failure transport
+  messenger:failed:show                      Show one or more messages from the failure transport
+  messenger:setup-transports                 Prepare the required infrastructure for the transport
+  messenger:stop-workers                     Stop workers after their current message
+ router
+ server
+  server:dump                                Start a dump server that collects and displays dumps in a single place
+  server:log                                 Start a log server that displays logs in real time
+ translation
+  translation:extract                        [translation:update] Extract missing translations keys from code to translation files.        
+  translation:pull                           Pull translations from a given provider.
+  translation:push                           Push translations to a given provider.
+PS C:\wamp64\www\UdemySiteEcommerce> symfony console doctrine:database:create
+Created database `baseboutiqueenligne` for connection named default
+PS C:\wamp64\www\UdemySiteEcommerce>
+.......................formulaire.........................................
+PS C:\wamp64\www\UdemySiteEcommerce> symfony console make:Controller RegisterController
+
+ created: src/Controller/RegisterController.php
+ created: templates/register/index.html.twig
+
+
+  Success!
+
+
+ Next: Open your new controller class and add some pages!
+PS C:\wamp64\www\UdemySiteEcommerce> symfony console make:form
+
+ The name of the form class (e.g. OrangePuppyType):
+ > Register
+
+ The name of Entity or fully qualified model class name that the new form will be bound to (empty for none):
+ > User
+
+ created: src/Form/RegisterType.php
+ ...................................................
+ <?php
+
+namespace App\Controller;
+use App\Entity\User;
+use App\Form\RegisterType;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use App\Controller\EntityManagerInterface;
+use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\Routing\Annotation\Route;
+
+class RegisterController extends AbstractController
+{
+    /**
+     * @Route("/inscription", name="register")
+     */
+    public function index(Request $request): Response
+    {
+        $user = new User();
+        $form = $this->createForm(RegisterType::class, $user);
+        $form->handleRequest($request);
+        if ($form->isSubmitted() && $form->isValid()) {
+            $user=$form->getData();
+
+           // dd($user);
+          $doctrine=$this->getDoctrine()->getManager();
+          $doctrine->persist($user);
+          $doctrine->flush();
+        }
+        return $this->render('register/index.html.twig',
+    [
+        'form'=> $form->createView()
+    ]);
+    }
+}
+..................................................................mon code .................
+<?php
+
+namespace App\Controller;
+//use App\Controller\RegisterController;
+use App\Entity\User;
+use App\Form\RegisterType;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\Routing\Annotation\Route;
+
+
+class RegisterController extends AbstractController
+{
+        // Au choix dans ton constructeur ou dans chaque méthode :
+       // public function __construct(private ManagerRegistry $doctrine) {}
+        
+    /**
+     * @Route("/inscription", name="register")
+     */
+    public function index(Request $request): Response
+    {
+        $user = new User();
+        $form = $this->createForm(RegisterType::class, $user);
+        $form->handleRequest($request);
+      if ($form->isSubmitted() && $form->isValid()) {
+        $user=$form->getData();
+
+           
+         $doctrine=$this->getDoctrine()->getManager();
+         $doctrine->persist($user);
+     }
+        return $this->render('register/index.html.twig',
+    [
+        'form'=> $form->createView()
+    ]);
+    }
+}..............fin de mode controllertype.....................
+{{dump(app.user.firstname)}}
+..............dans base html.twig
+<form class="form-inline mt-2 mt-md-0">
+						<input class="form-control mr-sm-2" type="text" placeholder="Votre recherche" aria-label="search ">
+						<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Rechercher
+						</button>
+					</form>
+          ..............................
+          PS C:\wamp64\www\UdemySiteEcommerce> symfony console debug:router
+ -------------------------- -------- -------- ------ ----------------------------------- 
+  Name                       Method   Scheme   Host   Path
+ -------------------------- -------- -------- ------ ----------------------------------- 
+  _wdt                       ANY      ANY      ANY    /_wdt/{token}
+  _profiler_home             ANY      ANY      ANY    /_profiler/
+  _profiler_search           ANY      ANY      ANY    /_profiler/search
+  _profiler_search_bar       ANY      ANY      ANY    /_profiler/search_bar
+  _profiler_phpinfo          ANY      ANY      ANY    /_profiler/phpinfo
+  _profiler_search_results   ANY      ANY      ANY    /_profiler/{token}/search/results  
+  _profiler_open_file        ANY      ANY      ANY    /_profiler/open
+  _profiler                  ANY      ANY      ANY    /_profiler/{token}
+  _profiler_router           ANY      ANY      ANY    /_profiler/{token}/router
+  _profiler_exception        ANY      ANY      ANY    /_profiler/{token}/exception       
+  _profiler_exception_css    ANY      ANY      ANY    /_profiler/{token}/exception.css   
+  account                    ANY      ANY      ANY    /compte
+  home                       ANY      ANY      ANY    /
+  register                   ANY      ANY      ANY    /inscription
+  app_login                  ANY      ANY      ANY    /connexion
+  app_logout                 ANY      ANY      ANY    /deconnexion
+  _preview_error             ANY      ANY      ANY    /_error/{code}.{_format}
+ -------------------------- -------- -------- ------ -----------------------------
+ changement de mot de passe de
+ notification
+ vues 
+ ................on supprimer le accountcontroller....................
+ ................cration de easy admin et dashboard .................
+ PS C:\wamp64\www\UdemySiteEcommerce> symfony console  make:admin:dashboard
+
+ Which class name do you prefer for your Dashboard controller? [DashboardController]:
+ >  
+
+ In which directory of your project do you want to generate "DashboardController"? [src/Controller/Admin/]:
+ >
+
+
+
+ [OK] Your dashboard class has been successfully generated.                                                             
+                                                                                                                        
+
+ Next steps:
+ * Configure your Dashboard at "src/Controller/Admin/DashboardController.php"
+ * Run "make:admin:crud" to generate CRUD controllers and link them from the Dashboard.
+ ...................................................................categories etc....................
+ 
+PS C:\wamp64\www\UdemySiteEcommerce> symfony console make:entity      
+
+ Class name of the entity to create or update (e.g. AgreeableElephant):
+ > Product 
+
+ created: src/Entity/Product.php
+ created: src/Repository/ProductRepository.php
+ 
+ Entity generated! Now let's add some fields!
+ You can always add more fields later manually or by re-running this command.
+
+ New property name (press <return> to stop adding fields):
+ > name
+
+ Field type (enter ? to see all types) [string]:
+ > 
+
+ Field length [255]:
+ >
+
+ Can this field be null in the database (nullable) (yes/no) [no]:
+ >
+
+ updated: src/Entity/Product.php
+
+ Add another property? Enter the property name (or press <return> to stop adding fields):
+ > Slug
+
+ Field type (enter ? to see all types) [string]:
+ >
+
+ Field length [255]:
+ >
+
+ Can this field be null in the database (nullable) (yes/no) [no]:
+ >
+
+ updated: src/Entity/Product.php
+
+ Add another property? Enter the property name (or press <return> to stop adding fields):
+ > Illustration
+
+ Field type (enter ? to see all types) [string]:
+ >
+
+ Field length [255]:
+ >
+
+ Can this field be null in the database (nullable) (yes/no) [no]:
+ >
+
+ updated: src/Entity/Product.php
+
+ Add another property? Enter the property name (or press <return> to stop adding fields):
+ > Subtitle
+
+ Field type (enter ? to see all types) [string]:
+ >
+
+ Field length [255]:
+ >
+
+ Can this field be null in the database (nullable) (yes/no) [no]:
+ >
+
+ updated: src/Entity/Product.php
+
+ Add another property? Enter the property name (or press <return> to stop adding fields):
+ > description
+
+ Field type (enter ? to see all types) [string]:
+ > text
+
+ Can this field be null in the database (nullable) (yes/no) [no]:
+ >
+
+ updated: src/Entity/Product.php
+
+ Add another property? Enter the property name (or press <return> to stop adding fields):
+ > price
+
+ Field type (enter ? to see all types) [string]:
+ > float
+
+ Can this field be null in the database (nullable) (yes/no) [no]:
+ >
+
+ updated: src/Entity/Product.php
+
+ Add another property? Enter the property name (or press <return> to stop adding fields):
+ > category
+
+ Field type (enter ? to see all types) [string]:
+ > relation
+
+ What class should this entity be related to?:
+ > Category
+
+What type of relationship is this?
+ ------------ ----------------------------------------------------------------------- 
+  Type         Description
+ ------------ -----------------------------------------------------------------------
+  ManyToOne    Each Product relates to (has) one Category.
+               Each Category can relate to (can have) many Product objects
+
+  OneToMany    Each Product can relate to (can have) many Category objects.
+               Each Category relates to (has) one Product
+
+  ManyToMany   Each Product can relate to (can have) many Category objects.
+               Each Category can also relate to (can also have) many Product objects  
+
+  OneToOne     Each Product relates to (has) exactly one Category.
+               Each Category also relates to (has) exactly one Product.
+ ------------ -----------------------------------------------------------------------
+
+ Relation type? [ManyToOne, OneToMany, ManyToMany, OneToOne]:
+ > ManyToOne
+
+ Is the Product.category property allowed to be null (nullable)? (yes/no) [yes]:
+ > no
+
+ Do you want to add a new property to Category so that you can access/update Product objects from it - e.g. $category->getProducts()? (yes/no) [yes]:
+ > 
+
+ A new property will also be added to the Category class so that you can access the related Product objects from it.
+
+ New field name inside Category [products]:
+ >
+
+ Do you want to activate orphanRemoval on your relationship?
+ A Product is "orphaned" when it is removed from its related Category.
+ e.g. $category->removeProduct($product)
+
+ NOTE: If a Product may *change* from one Category to another, answer "no".
+
+ Do you want to automatically delete orphaned App\Entity\Product objects (orphanRemoval)? (yes/no) [no]:
+ >
+
+ updated: src/Entity/Product.php
+ updated: src/Entity/Category.php
+
+ Add another property? Enter the property name (or press <return> to stop adding fields):
+ >
+
+
+ 
+  Success! 
+ 
+
+ Next: When you're ready, create a migration with php bin/console make:migration
+
+PS C:\wamp64\www\UdemySiteEcommerce> symfony console make:migration
+
+
+ 
+  Success! 
+ 
+
+ Next: Review the new migration "migrations/Version20220213165834.php"
+ Then: Run the migration with php bin/console doctrine:migrations:migrate
+ See https://symfony.com/doc/current/bundles/DoctrineMigrationsBundle/index.html
+PS C:\wamp64\www\UdemySiteEcommerce> symfony console octrine:migrations:migrate
+
+
+  There are no commands defined in the "octrine:migrations" namespace.  
+                                                                        
+  Did you mean one of these?                                            
+      doctrine                                                          
+      doctrine:cache                                                    
+      doctrine:database                                                 
+      doctrine:mapping                                                  
+      doctrine:migrations                                               
+      doctrine:query                                                    
+      doctrine:schema                                                   
+                                                                        
+
+PS C:\wamp64\www\UdemySiteEcommerce> symfony console doctrine:migrations:migrate
+
+ WARNING! You are about to execute a migration in database "baseboutiqueenligne" that could result in schema changes and data loss. Are you sure you wish to continue? (yes/no) [yes]:
+ >
+
+[notice] Migrating up to DoctrineMigrations\Version20220213165834
+[notice] finished in 214.2ms, used 22M memory, 1 migrations executed, 2 sql queries
+.........................................................
